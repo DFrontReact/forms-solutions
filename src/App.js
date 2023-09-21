@@ -1,17 +1,11 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
 
 export default function App() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const 
-
-  }
   return (
     <div className="container">
       <h1>Título del formulario</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label for="name">Nombre</label>
         <input type="text" id="name" />
         <label for="age">Edad</label>
