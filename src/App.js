@@ -2,10 +2,16 @@ import React from "react";
 import "./style.css";
 
 export default function App() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const 
+
+  }
   return (
-<div className="container">
+    <div className="container">
       <h1>Título del formulario</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label for="name">Nombre</label>
         <input type="text" id="name" />
         <label for="age">Edad</label>
@@ -21,8 +27,8 @@ export default function App() {
         </select>
         <input type="checkbox" id="allAccepted" />
         <label for="allAccepted">¿Has leido todo?</label>
+        <button>Enviar</button>
       </form>
-      <button>Enviar</button>
     </div>
   );
 }
