@@ -30,9 +30,11 @@ export default function App() {
         <input
           type="checkbox"
           id="allAccepted"
-          aria-describedby="¿Has leido todo?"
+          aria-describedby="allAceptedLabel"
         />
-        <label for="allAccepted">¿Has leido todo?</label>
+        <label id="allAceptedLabel" for="allAccepted">
+          ¿Has leido todo?
+        </label>
         <button>Enviar</button>
       </form>
     </div>
