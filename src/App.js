@@ -17,6 +17,10 @@ export default function App() {
     // Aquí podriamos meter información que necesitaramos enviar o validaciones
     const { email } = values;
 
+    emailValidate(email);
+  };
+
+  const emailValidate = (email) => {
     // Expresión regular para validar el correo electronico
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
