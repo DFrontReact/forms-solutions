@@ -15,6 +15,20 @@ export default function App() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     // Aquí podriamos meter información que necesitaramos enviar o validaciones
+    const { email } = values;
+
+    // Expresión regular para validar el correo electronico
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    // Validación de el email
+    const isValidEmail = emailRegex.test(email);
+    if (!isValidEmail) {
+      emailMessage.classList.remove('hidden');
+      emailMessage.classList.add('show');
+      return;
+    }
+    emailMessage.classList.remove('show');
+    emailMessage.classList.add('hidden');
   };
 
   // Función manejadora del evento
@@ -56,6 +70,7 @@ export default function App() {
           type="number"
           name="age"
           id="age"
+          min="0"
           value={values.age}
           onChange={handleChanges}
         />
@@ -75,6 +90,9 @@ export default function App() {
           id="email"
           onChange={handleChanges}
         />
+        <div id="emailMessage" class="hidden">
+          Correo electrónico no válido
+        </div>
         <label for="genre">Sexo</label>
         <select
           id="genre"
