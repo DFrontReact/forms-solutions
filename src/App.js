@@ -15,12 +15,12 @@ export default function App() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     // Aquí podriamos meter información que necesitaramos enviar o validaciones
-    const { email } = values;
 
-    emailValidate(email);
+    emailValidate();
   };
 
-  const emailValidate = (email) => {
+  const emailValidate = () => {
+    const { email } = values;
     // Expresión regular para validar el correo electronico
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
