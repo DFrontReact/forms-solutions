@@ -1,28 +1,102 @@
-import React from "react";
-import "./style.css";
+import React, { useState } from 'react';
+import './style.css';
 
 export default function App() {
+  // Esta recibe objeto con el nombre de las etiquetas
+  const [values, setValues] = useState({
+    name: '',
+    age: '',
+    password: '',
+    email: '',
+    genre: 'macho',
+    allAccepted: false,
+  });
+  // Función para prevenir el comportamiento por defecto del formulario
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    // Aquí podriamos meter información que necesitaramos enviar o validaciones
+  };
+
+  // Función manejadora del evento
+  const handleChanges = ({ target }) => {
+    const { name, type, checked, value } = target;
+    /*
+      Variable que almacena si es de tipo value o de tipo checked
+    */
+    const newValue = type === 'checkbox' ? checked : value;
+
+    /*
+      1- Clona nuestro estado actual
+      2- remplaza solo el valor del input que se ejecuta en el evento
+    */
+    const newValues = {
+      ...values,
+      [name]: newValue,
+    };
+
+    // Volvemos a sincronizar el estado de nuevo
+    setValues(newValues);
+  };
+  console.log(values);
+
   return (
-<div className="container">
+    <div className="container">
       <h1>Título del formulario</h1>
       <form>
         <label for="name">Nombre</label>
-        <input type="text" id="name" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value={values.name}
+          onChange={handleChanges}
+        />
         <label for="age">Edad</label>
-        <input type="number" id="age" />
+        <input
+          type="number"
+          name="age"
+          id="age"
+          value={values.age}
+          onChange={handleChanges}
+        />
         <label for="password">Contraseña</label>
-        <input type="password" id="password" />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={values.password}
+          onChange={handleChanges}
+        />
         <label for="email">Email</label>
-        <input type="email" id="email" />
+        <input
+          type="email"
+          name="email"
+          value={values.email}
+          id="email"
+          onChange={handleChanges}
+        />
         <label for="genre">Sexo</label>
-        <select id="genre">
+        <select
+          id="genre"
+          name="genre"
+          value={values.genre}
+          onChange={handleChanges}
+        >
           <option value="macho">Macho</option>
           <option value="hembra">Hembra</option>
         </select>
-        <input type="checkbox" id="allAccepted" />
-        <label for="allAccepted">¿Has leido todo?</label>
+        <input
+          type="checkbox"
+          name="allAccepted"
+          checked={values.allAccepted}
+          id="allAccepted"
+          onChange={handleChanges}
+        />
+        <label for="allAccepted" value="true">
+          ¿Has leido todo?
+        </label>
       </form>
-      <button>Enviar</button>
+      <button onClick={handleSubmit}>Enviar</button>
     </div>
   );
 }
