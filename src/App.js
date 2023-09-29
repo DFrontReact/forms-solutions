@@ -2,14 +2,10 @@ import React from 'react';
 import './style.css';
 
 export default function App() {
-  const [value, setValue] = React.useState('');
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+  const inputRef = React.useRef('');
 
   const handleSubmit = (event) => {
-    alert('A name was submitted: ' + value);
+    alert('A name was submitted: ' + inputRef.current.value);
     event.preventDefault();
   };
 
@@ -17,7 +13,7 @@ export default function App() {
     <form onSubmit={handleSubmit}>
       <label>
         Name:
-        <input type="text" value={value} onChange={handleChange} />
+        <input type="text" ref={inputRef} />
       </label>
       <input type="submit" value="Submit" />
     </form>
