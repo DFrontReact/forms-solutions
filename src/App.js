@@ -9,11 +9,11 @@ export default function App() {
         <fieldset>
           <legend>Datos personales</legend>
           <label for="name">Nombre</label>
-          <input type="text" id="name" aria-label="Nombre" />
+          <input type="text" id="name" name="name" aria-label="Nombre" />
           <label for="age">Edad</label>
-          <input type="number" id="age" aria-label="Edad" />
+          <input type="number" id="age" name="age" aria-label="Edad" />
           <label for="genre">Sexo</label>
-          <select id="genre">
+          <select id="genre" name="genre">
             <option value="macho">Macho</option>
             <option value="hembra">Hembra</option>
           </select>
@@ -22,14 +22,15 @@ export default function App() {
         <fieldset>
           <legend>Cuenta</legend>
           <label for="password">Contraseña</label>
-          <input type="password" id="password" aria-label="Contraseña" />
+          <input type="password" id="password" name="password" aria-label="Contraseña" />
           <label for="email">Email</label>
-          <input type="email" id="email" aria-label="Email" />
+          <input type="email" id="email" name="email" aria-label="Email" />
         </fieldset>
 
         <input
           type="checkbox"
           id="allAccepted"
+          name="allAccepted"
           aria-describedby="allAceptedLabel"
         />
         <label id="allAceptedLabel" for="allAccepted">
