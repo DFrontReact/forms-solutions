@@ -104,8 +104,8 @@ export default function App() {
           value={values.genre}
           onChange={handleChanges}
         >
-          <option value="male">Hombre</option>
-          <option value="female">Mujer</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
         </select>
         <input
           type="checkbox"
