@@ -10,7 +10,7 @@ export default function App() {
     age: 0,
     password: '',
     email: '',
-    genre: 'macho',
+    genre: 'male',
     allAccepted: false,
   };
 
@@ -50,8 +50,8 @@ export default function App() {
             <ErrorMessage name="email" component="div" />
             <label htmlFor="genre">Sexo</label>
             <Field as="select" name="genre">
-              <option value="macho">Macho</option>
-              <option value="hembra">Hembra</option>
+              <option value="male">Hombre</option>
+              <option value="femenine">Femenino</option>
             </Field>
             <ErrorMessage name="genre" component="div" />
             <Field type="checkbox" name="allAccepted" />
