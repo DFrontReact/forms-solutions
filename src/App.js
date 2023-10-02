@@ -51,8 +51,8 @@ export default function App() {
 
         <label htmlFor="genre">Genero</label>
         <select id="genre" {...register('genre')}>
-          <option value="male">Macho</option>
-          <option value="female">Hembra</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
           <option value="other">Otro</option>
         </select>
 
