@@ -1,11 +1,6 @@
 import * as React from 'react';
 import './style.css';
-import {
-  Formik,
-  Field,
-  Form,
-  ErrorMessage,
-} from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 export default function App() {
@@ -15,7 +10,7 @@ export default function App() {
     age: 0,
     password: '',
     email: '',
-    genre: 'macho',
+    genre: 'male',
     allAccepted: false,
   };
 
@@ -58,8 +53,8 @@ export default function App() {
             <ErrorMessage name="email" component="div" />
             <label htmlFor="genre">Sexo</label>
             <Field as="select" name="genre">
-              <option value="macho">Macho</option>
-              <option value="hembra">Hembra</option>
+              <option value="male">Masculino</option>
+              <option value="female">Femenino</option>
             </Field>
             <ErrorMessage name="genre" component="div" />
             <Field type="checkbox" name="allAccepted" />
