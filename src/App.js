@@ -1,9 +1,9 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
 
 export default function App() {
   return (
-<div className="container">
+    <div className="container">
       <h1>Título del formulario</h1>
       <form>
         <label for="name">Nombre</label>
@@ -16,8 +16,8 @@ export default function App() {
         <input type="email" id="email" />
         <label for="genre">Sexo</label>
         <select id="genre">
-          <option value="macho">Macho</option>
-          <option value="hembra">Hembra</option>
+          <option value="male">Masculino</option>
+          <option value="female">Hembra</option>
         </select>
         <input type="checkbox" id="allAccepted" />
         <label for="allAccepted">¿Has leido todo?</label>
