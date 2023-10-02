@@ -8,7 +8,7 @@ export default function App() {
     age: '',
     password: '',
     email: '',
-    genre: 'hombre',
+    genre: 'male',
     allAccepted: false,
   });
   // Función para prevenir el comportamiento por defecto del formulario
