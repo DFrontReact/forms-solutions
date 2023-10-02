@@ -50,8 +50,8 @@ export default function App() {
             <ErrorMessage name="email" component="div" />
             <label htmlFor="genre">Sexo</label>
             <Field as="select" name="genre">
-              <option value="male">Hombre</option>
-              <option value="femenine">Femenino</option>
+              <option value="male">Masculino</option>
+              <option value="female">Femenino</option>
             </Field>
             <ErrorMessage name="genre" component="div" />
             <Field type="checkbox" name="allAccepted" />
