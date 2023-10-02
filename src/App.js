@@ -8,7 +8,7 @@ export default function App() {
     age: '',
     password: '',
     email: '',
-    genre: 'macho',
+    genre: 'hombre',
     allAccepted: false,
   });
   // Función para prevenir el comportamiento por defecto del formulario
@@ -104,8 +104,8 @@ export default function App() {
           value={values.genre}
           onChange={handleChanges}
         >
-          <option value="macho">Macho</option>
-          <option value="hembra">Hembra</option>
+          <option value="male">Hombre</option>
+          <option value="female">Mujer</option>
         </select>
         <input
           type="checkbox"
