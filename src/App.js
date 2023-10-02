@@ -29,8 +29,8 @@ export default function App() {
         <input type="email" id="email" name="email" />
         <label for="sex">Sexo</label>
         <select id="sex" name="sex">
-          <option value="macho">Macho</option>
-          <option value="hembra">Hembra</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
         </select>
         <input type="checkbox" id="allAccepted" name="allAccepted" />
         <label for="allAccepted">¿Has leido todo?</label>
