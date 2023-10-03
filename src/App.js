@@ -14,18 +14,6 @@ export default function App() {
     allAccepted: false,
   };
 
-  const formSchema = Yup.object().shape({
-    name: Yup.string().required('Required'),
-    age: Yup.number()
-      .min(18, 'Age should be 18 at least')
-      .max(30, 'Age should be less than 30')
-      .required('Required'),
-    password: Yup.string().required('Required'),
-    genre: Yup.string().required('Required'),
-    allAccepted: Yup.boolean().required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
-  });
-
   return (
     <div className="container">
       <h1>Título del formulario</h1>
