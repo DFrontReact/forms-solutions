@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.css';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 
 export default function App() {
-  const [value, setValue] = React.useState('');
+  const [componentValue, setComponentValue] = React.useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
