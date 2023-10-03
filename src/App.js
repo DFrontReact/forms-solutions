@@ -14,6 +14,8 @@ export default function App() {
     allAccepted: false,
   };
 
+  const formSchema = {};
+
   return (
     <div className="container">
       <h1>Título del formulario</h1>
