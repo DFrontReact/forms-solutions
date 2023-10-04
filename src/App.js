@@ -14,8 +14,8 @@ export default function App() {
           <input type="number" id="age" name="age" aria-label="Edad" />
           <label for="genre">Sexo</label>
           <select id="genre" name="genre">
-            <option value="macho">Macho</option>
-            <option value="hembra">Hembra</option>
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
           </select>
         </fieldset>
 
